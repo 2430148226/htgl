@@ -9,7 +9,7 @@
           <el-icon><HomeFilled /></el-icon>
           首页
         </el-menu-item>
-
+        <!-- 系统管理菜单放到首页下方 -->
         <el-sub-menu index="/system">
           <template #title>
             <el-icon><Setting /></el-icon>
@@ -36,6 +36,31 @@
             机构管理
           </el-menu-item>
         </el-sub-menu>
+        <!-- 新增一级菜单：产品管理 -->
+        <el-menu-item index="/product">
+          <el-icon><Box /></el-icon>
+          产品管理
+        </el-menu-item>
+        <!-- 新增一级菜单：月度汇总 -->
+        <el-menu-item index="/monthly">
+          <el-icon><Calendar /></el-icon>
+          月度汇总
+        </el-menu-item>
+        <!-- 新增一级菜单：计件标准 -->
+        <el-menu-item index="/monthly/standard">
+          <el-icon><Tickets /></el-icon>
+          计件标准
+        </el-menu-item>
+        <!-- 新增一级菜单：记工单 -->
+        <el-menu-item index="/monthly/workorder">
+          <el-icon><UserFilled /></el-icon>
+          记工单
+        </el-menu-item>
+        <!-- 新增一级菜单：员工工资 -->
+        <el-menu-item index="/monthly/salary">
+          <el-icon><Avatar /></el-icon>
+          员工工资
+        </el-menu-item>
       </el-menu>
     </el-aside>
     <el-container>
@@ -51,5 +76,5 @@
 </template>
 
 <script setup>
-import { HomeFilled, Setting, User, Avatar, Tickets, UserFilled, OfficeBuilding } from '@element-plus/icons-vue'
+import { HomeFilled, Setting, User, Avatar, Tickets, UserFilled, OfficeBuilding, Box, Calendar } from '@element-plus/icons-vue'
 </script>
