@@ -160,17 +160,15 @@ const headerCellStyle = () => ({
 
 <style scoped>
 .container {
-  width: 96%;
-  max-width: 1400px;
-  margin: 32px auto;
-  background: #f8fafc;
-  padding: 32px 28px 24px 28px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 30px 16px 30px;
+  background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
-  min-height: 600px;
-  height: calc(100vh - 64px);
   box-sizing: border-box;
 }
 .controls-section {
@@ -188,7 +186,7 @@ const headerCellStyle = () => ({
   gap: 14px;
 }
 .table-wrapper {
-  flex-grow: 1;
+  flex: 1 1 auto;
   overflow: auto;
   background: #fff;
   border-radius: 10px;
@@ -196,6 +194,8 @@ const headerCellStyle = () => ({
   min-height: 320px;
   padding: 16px 8px 8px 8px;
   border: 1px solid #ebeef5;
+  display: flex;
+  flex-direction: column;
 }
 :deep(.el-table) {
   border-radius: 10px;

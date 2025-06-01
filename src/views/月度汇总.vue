@@ -192,13 +192,16 @@ function mergeWorkshop({ row, column, rowIndex }) {
 
 <style scoped>
 .container {
-  max-width: 1400px;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 30px 16px 30px;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 .page-header-actions {
   display: flex;

@@ -22,7 +22,7 @@
             border
             style="width: 100%"
             :span-method="mergeWorkshop"
-            height="500"
+            height="100%"
           >
             <el-table-column label="序号" width="60">
               <template #default="scope">{{ scope.$index + 1 }}</template>
@@ -207,8 +207,11 @@ function saveDaily() {
 <style scoped>
 .tab-container {
   background: #f5f7fa;
-  min-height: 100vh;
-  padding: 0 0 40px 0;
+  min-height: calc(100vh - 64px);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 .header {
   display: flex;
@@ -229,10 +232,23 @@ function saveDaily() {
   gap: 15px;
 }
 .table-wrapper {
-  padding: 24px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 16px 30px;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  margin: 0 0 24px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  min-height: 0;
+}
+/* 表格行高和单元格内容高度优化 */
+:deep(.el-table__row) {
+  height: 44px !important;
+}
+:deep(.el-table__cell) {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 15px;
 }
 </style>
